@@ -1,0 +1,307 @@
+@media screen and (max-width: 1600px)
+	.container
+		width: 1200px
+
+	.panel
+		&__logo
+			margin-right: 90px
+
+
+	.header
+		&__row
+			position: relative
+		&__counts
+			padding-top: 0
+			.col
+				float: none
+		&__logo
+			position: absolute
+			top: -100px
+			left: 45%
+			float: none
+			margin-right: 0
+			// display: none
+			// margin-right: 80px
+		&__form
+			float: right
+
+	.services
+		&__wrap
+			width: 600px
+		&__list
+			.services__wrap
+				padding-right: 15px
+		&__content
+			.services__wrap
+				padding-top: 30px
+				padding-left: 30px
+
+	.plashka
+		.input
+			width: 200px
+		.button, .selector
+			width: 290px
+		.button
+			padding-left: 0
+			padding-right: 0
+
+	.contacts
+		&__wrap
+			width: 600px
+			padding-left: 30px
+
+@media screen and (max-width: 1260px)
+	.container
+		width: 992px
+	.logo
+		float: none
+		margin-left: auto
+		margin-right: auto
+		text-align: center
+		padding-top: 8px
+		&__text
+			display: none !important
+
+	.panel
+		height: 84px
+		background-image: none
+		.container
+			position: static
+		&__button
+			display: block
+			cursor: pointer
+		&__nav
+			display: none
+			float: none
+			position: absolute
+			top: 84px
+			left: 0
+			background: #2d5786
+			width: 100%
+			padding: 0 15px 20px
+			z-index: 9999
+			li
+				display: block
+				margin-bottom: 5px
+				font-size: 18px
+				&:last-of-type
+					margin-bottom: 0
+			a
+				&:after
+					display: none !important
+		&__contacts
+			position: absolute
+			top: 14px
+			right: 15px
+			padding-top: 0
+			.phone
+				font-size: 13px
+				.icon
+					top: -1px
+
+	.header
+		background-image: none
+		padding-bottom: 30px
+		padding-top: 30px
+		&__title
+			font-size: 40px
+			margin-bottom: 30px
+			height: 80px
+			width: 635px
+			padding-top: 10px
+		&__counts
+			float: none
+			margin-right: 0
+			text-align: center
+			.row
+				display: inline
+				margin-left: 0
+				margin-right: 0
+				&:before, &:after
+					display: none
+			.col
+				float: none
+				display: inline-block
+		&__logo
+			z-index: -1
+			top: 40px
+			left: 41.8%
+		&__form
+			display: none
+
+		&__button-hidden
+			display: block
+			text-align: center
+			width: 100%
+			max-width: 337px
+			margin-left: auto
+			margin-right: auto
+
+	.services
+		background-image: linear-gradient(to right, #2d5786 0%, #3d82d0 100%);
+		.col
+			width: 992px
+			height: auto !important
+			background: none !important
+			margin-left: auto
+			margin-right: auto
+			float: none
+		&__title
+			font-size: 40px
+		&__wrap
+			width: 100%
+			float: none !important
+		&__title
+			padding-top: 20px
+			margin-bottom: 15px
+		&__text
+			font-size: 15px
+		&__links
+			padding-bottom: 50px
+		&__content
+			color: white
+			font-size: 15px
+			line-height: 25px
+			padding-bottom: 40px
+			.services__wrap
+				padding-top: 0
+				padding-left: 15px
+	.reviews
+		padding-top: 25px
+		padding-bottom: 25px
+		&__title
+			font-size: 40px
+
+	.plashka
+		padding-top: 30px
+		padding-bottom: 30px
+		.container
+			max-width: 470px
+			width: 100%
+		.input, .button, .selector
+			float: none
+			width: 100%
+			margin-right: 0
+			margin-bottom: 20px
+		.button
+			margin-bottom: 0
+
+	.clients
+		padding-top: 20px
+		padding-bottom: 2px
+		&__title
+			font-size: 40px
+			max-width: 600px
+			margin-left: auto
+			margin-right: auto
+		&__item
+			float: none
+			width: 33.3333% !important
+			margin-bottom: 43px
+	.contacts
+		&__map
+			display: none
+		&__content
+			float: none
+			width: 100% !important
+			padding-bottom: 30px
+		&__wrap
+			margin-left: auto
+			margin-right: auto
+			padding-top: 28px
+			padding-left: 0
+
+@media screen and (max-width: 1010px)
+	.container
+		width: 750px
+	.header__logo
+		left: 39.1%
+
+	.reviews__list
+		width: 100%
+
+	.services .col
+		width: 100%
+
+@media screen and (max-width: 767px)
+	.container
+		width: 100%
+	.panel__contacts
+		display: none
+	.header
+		&__title
+			height: auto
+			width: auto
+			background-image: none
+			font-size: 18px
+			padding-top: 0
+		&__logo
+			display: none
+		&__counts
+			.col
+				display: block
+				padding-left: 0
+				padding-right: 0
+			.count
+				margin-left: auto
+				margin-right: auto
+				width: 255px
+			.count__title
+				width: 255px
+	.reviews__title, .clients__title, .contacts__title
+		font-size: 25px
+	.reviews__title
+		margin-bottom: 30px
+	.clients__title
+		max-width: 220px
+	.services__title
+		font-size: 18px
+	.services__content .services__wrap
+		font-size: 15px
+	.clients__item
+		width: 100% !important
+		margin-bottom: 27px
+	.contacts__desc
+		margin-bottom: 25px
+		letter-spacing: 1px
+	.contacts__text
+		margin-bottom: 30px
+	.contacts__table
+		margin-bottom: 0
+	.contacts__wrap
+		width: 100%
+		max-width: 600px
+		padding-left: 15px
+		padding-right: 15px
+		.col
+			float: none
+			width: 100%
+			padding-left: 0 !important
+			padding-right: 0 !important
+
+@media screen and (max-width: 630px)
+	.contacts__button
+		padding-left: 0
+		padding-right: 0
+		width: 274px
+	.footer
+
+		&__top
+			font-size: 12px
+			padding-top: 30px
+		&__bottom
+			padding-bottom: 20px
+			li
+				width: 33.3333%
+				margin-bottom: 13px
+				font-size: 12px
+	.copy
+		span
+			display: block
+
+@media screen and (max-width: 360px)
+	.input, .textarea, .selector__text
+		padding-left: 20px
+		padding-right: 20px
+	.selector__text:after
+		right: 15px

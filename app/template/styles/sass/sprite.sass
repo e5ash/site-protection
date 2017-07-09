@@ -1,0 +1,157 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$arrow-down-name: 'arrow-down'
+$arrow-down-x: 27px
+$arrow-down-y: 32px
+$arrow-down-offset-x: -27px
+$arrow-down-offset-y: -32px
+$arrow-down-width: 16px
+$arrow-down-height: 9px
+$arrow-down-total-width: 68px
+$arrow-down-total-height: 62px
+$arrow-down-image: '../../images/sprite.png'
+$arrow-down: (27px, 32px, -27px, -32px, 16px, 9px, 68px, 62px, '../../images/sprite.png', 'arrow-down', )
+$arrow-left-name: 'arrow-left'
+$arrow-left-x: 0px
+$arrow-left-y: 30px
+$arrow-left-offset-x: 0px
+$arrow-left-offset-y: -30px
+$arrow-left-width: 17px
+$arrow-left-height: 32px
+$arrow-left-total-width: 68px
+$arrow-left-total-height: 62px
+$arrow-left-image: '../../images/sprite.png'
+$arrow-left: (0px, 30px, 0px, -30px, 17px, 32px, 68px, 62px, '../../images/sprite.png', 'arrow-left', )
+$arrow-right-name: 'arrow-right'
+$arrow-right-x: 27px
+$arrow-right-y: 0px
+$arrow-right-offset-x: -27px
+$arrow-right-offset-y: 0px
+$arrow-right-width: 17px
+$arrow-right-height: 32px
+$arrow-right-total-width: 68px
+$arrow-right-total-height: 62px
+$arrow-right-image: '../../images/sprite.png'
+$arrow-right: (27px, 0px, -27px, 0px, 17px, 32px, 68px, 62px, '../../images/sprite.png', 'arrow-right', )
+$phone-name: 'phone'
+$phone-x: 44px
+$phone-y: 40px
+$phone-offset-x: -44px
+$phone-offset-y: -40px
+$phone-width: 14px
+$phone-height: 22px
+$phone-total-width: 68px
+$phone-total-height: 62px
+$phone-image: '../../images/sprite.png'
+$phone: (44px, 40px, -44px, -40px, 14px, 22px, 68px, 62px, '../../images/sprite.png', 'phone', )
+$quote-name: 'quote'
+$quote-x: 44px
+$quote-y: 0px
+$quote-offset-x: -44px
+$quote-offset-y: 0px
+$quote-width: 24px
+$quote-height: 19px
+$quote-total-width: 68px
+$quote-total-height: 62px
+$quote-image: '../../images/sprite.png'
+$quote: (44px, 0px, -44px, 0px, 24px, 19px, 68px, 62px, '../../images/sprite.png', 'quote', )
+$rf-name: 'rf'
+$rf-x: 0px
+$rf-y: 0px
+$rf-offset-x: 0px
+$rf-offset-y: 0px
+$rf-width: 27px
+$rf-height: 30px
+$rf-total-width: 68px
+$rf-total-height: 62px
+$rf-image: '../../images/sprite.png'
+$rf: (0px, 0px, 0px, 0px, 27px, 30px, 68px, 62px, '../../images/sprite.png', 'rf', )
+$time-name: 'time'
+$time-x: 44px
+$time-y: 19px
+$time-offset-x: -44px
+$time-offset-y: -19px
+$time-width: 21px
+$time-height: 21px
+$time-total-width: 68px
+$time-total-height: 62px
+$time-image: '../../images/sprite.png'
+$time: (44px, 19px, -44px, -19px, 21px, 21px, 68px, 62px, '../../images/sprite.png', 'time', )
+$spritesheet-width: 68px
+$spritesheet-height: 62px
+$spritesheet-image: '../../images/sprite.png'
+$spritesheet-sprites: ($arrow-down, $arrow-left, $arrow-right, $phone, $quote, $rf, $time, )
+$spritesheet: (68px, 62px, '../../images/sprite.png', $spritesheet-sprites, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)
+.icon-arrow-down
+  @include sprite($arrow-down)
+.icon-arrow-left
+  @include sprite($arrow-left)
+.icon-arrow-right
+  @include sprite($arrow-right)
+.icon-phone
+  @include sprite($phone)
+.icon-quote
+  @include sprite($quote)
+.icon-rf
+  @include sprite($rf)
+.icon-time
+  @include sprite($time)

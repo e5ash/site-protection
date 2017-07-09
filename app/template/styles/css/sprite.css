@@ -1,0 +1,41 @@
+.icon-arrow-down {
+  background-image: url(../../images/sprite.png);
+  background-position: -27px -32px;
+  width: 16px;
+  height: 9px; }
+
+.icon-arrow-left {
+  background-image: url(../../images/sprite.png);
+  background-position: 0px -30px;
+  width: 17px;
+  height: 32px; }
+
+.icon-arrow-right {
+  background-image: url(../../images/sprite.png);
+  background-position: -27px 0px;
+  width: 17px;
+  height: 32px; }
+
+.icon-phone {
+  background-image: url(../../images/sprite.png);
+  background-position: -44px -40px;
+  width: 14px;
+  height: 22px; }
+
+.icon-quote {
+  background-image: url(../../images/sprite.png);
+  background-position: -44px 0px;
+  width: 24px;
+  height: 19px; }
+
+.icon-rf {
+  background-image: url(../../images/sprite.png);
+  background-position: 0px 0px;
+  width: 27px;
+  height: 30px; }
+
+.icon-time {
+  background-image: url(../../images/sprite.png);
+  background-position: -44px -19px;
+  width: 21px;
+  height: 21px; }

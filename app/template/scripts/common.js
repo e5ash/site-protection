@@ -127,7 +127,7 @@ $(document).ready(function($) {
 	  }
 
 	/* Nav */
-	$(".panel__nav").on("click","a", function (event) {
+	$(".panel__nav, .anchor").on("click","a", function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
 			top = $(id).offset().top;
